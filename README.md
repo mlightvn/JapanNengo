@@ -52,5 +52,9 @@ var_dump($nengo_array);
 echo "\n";
 
 $donate_url = $nengo->donateUrl();
-echo "Donate Url: " . $donate_url . "\n";
+echo "Donate Url: " . $donate_url . "\n\n";
+
+$author = $nengo->author();
+var_dump($author);
+echo "\n";
 ```
