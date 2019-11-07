@@ -20,10 +20,34 @@ require 'vendor/autoload.php';
 use NamTenTen\JapanNengo;
 
 $nengo = new JapanNengo();
-$nengo_year = $nengo->toNengoYear("2019/04/30");
-echo $nengo_year . "\n";
 
-$nengo_array = $nengo->toNengoArray("2019/11/07");
-var_dump($nengo_array)
+$date = 19890102;
+$nengo_date = $nengo->toNengoDate($date); // integer
+echo $date . " ⇒ " . $nengo_date . "\n";
+
+$date = "20190430";
+$nengo_year = $nengo->toNengoYear($date); // string
+$nengo_date = $nengo->toNengoDate($date); // integer
+echo $date . " ⇒ " . $nengo_year . "\n";
+echo $date . " ⇒ " . $nengo_date . "\n";
+
+$date = "20190501";
+$nengo_year = $nengo->toNengoYear($date); // string
+$nengo_date = $nengo->toNengoDate($date); // integer
+echo $date . " ⇒ " . $nengo_year . "\n";
+echo $date . " ⇒ " . $nengo_date . "\n";
+
+$date = "20191107";
+$nengo_array = $nengo->toNengoArray($date);
+$nengo_date = $nengo->toNengoDate($date); // integer
+echo $date . " ⇒ " . $nengo_date . "\n";
+var_dump($nengo_array);
+echo "\n";
+
+$date = 20201231;
+$nengo_array = $nengo->toNengoArray($date);
+$nengo_date = $nengo->toNengoDate($date); // integer
+echo $date . " ⇒ " . $nengo_date . "\n";
+var_dump($nengo_array);
 echo "\n";
 ```

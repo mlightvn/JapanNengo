@@ -2,7 +2,6 @@
 
 namespace NamTenTen;
 
-
 /**
  * 
  */
@@ -107,9 +106,18 @@ class JapanNengo
 		$western_year 		= (($western_date - ($western_date % 10000)) / 10000);
 
 		$era_year = $western_year - $prev_era_year["start"]['year'] + 1;
-		$era_year = $prev_era_year['nengo'] . $era_year;
+		$era_year = $prev_era_year['nengo'] . ($era_year == 1 ? "元" : $era_year) . "年";
 
 		return $era_year;
+	}
+
+	public function toNengoDate($western_date = 20191107)
+	{
+		$date_arr = $this->toNengoArray($western_date);
+		$nengo_year = $date_arr['custom']['year'];
+		$date_str = $date_arr["nengo"] . ($nengo_year == 1 ? "元" : $nengo_year) . "年" . $date_arr['custom']['month'] . "月" . $date_arr['custom']['day'] . "日";
+
+		return $date_str;
 	}
 
 	public function toNengoArray($western_date = 20191107)
