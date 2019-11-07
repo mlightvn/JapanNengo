@@ -1,6 +1,6 @@
 <?php
 
-namespace NamTenTen;
+namespace NamTenTen\classes;
 
 
 /**

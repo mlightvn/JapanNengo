@@ -5,12 +5,26 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "グエン ナム",
-            "email": "thietlalung@yahoo.com.vn"
+            "name": "Nguyen Nam",
+            "furigana": "グエン　ナム",
+            "email": "thietlalung@yahoo.com.vn",
+            "role": "Developer",
+            "nationality": "Vietnamese",
+            "living": "Japan, Tokyo Adachi-Ku Ayase",
+            "languages": [
+                            {"language": "Vietnamese", "level": "Native"},
+                            {"language": "English", "level": "Intermediate"},
+                            {"language": "Japanese", "level": "Around N3 and N2"}
+                        ]
         }
     ],
     "minimum-stability": "dev",
     "require": {
         "php": ">=7.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "namtenten\\": "src/"
+        }
     }
 }
