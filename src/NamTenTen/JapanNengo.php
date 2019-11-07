@@ -160,6 +160,11 @@ class JapanNengo
 		$author->name 				= "Nguyen Ngoc Nam";
 		$author->furigana 			= "グエン　ゴック　ナム";
 		$author->role 				= "Developer";
+		$author->social_urls 		= [
+			"linkedIn" 				=> "https://www.linkedin.com/in/nguyenngocnam/",
+			"github" 				=> "https://github.com/namtenten",
+			"stackoverflow" 		=> "https://stackoverflow.com/users/6351894/ngoc-nam",
+		];
 		$author->nationality 		= "Vietnamese";
 		$author->living 			= "Japan, Tokyo";
 		$author->languages 			= [
