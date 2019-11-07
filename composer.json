@@ -21,6 +21,7 @@
         "php": ">=7.2"
     },
     "autoload": {
+        "files": ["src/NamTenTen/JapanNengo.php"],
         "psr-4": {
             "NamTenTen\\": "src/NamTenTen/"
         }
