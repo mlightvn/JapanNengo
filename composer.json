@@ -9,6 +9,6 @@
             "email": "thietlalung@yahoo.com.vn"
         }
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "require": {}
 }
