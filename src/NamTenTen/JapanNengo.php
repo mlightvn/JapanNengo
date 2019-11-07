@@ -153,4 +153,22 @@ class JapanNengo
 		return "https://www.paypal.me/rakujin";
 	}
 
+	public function author()
+	{
+		$author = {
+			"name" 				=> "Nguyen Ngoc Nam",
+			"furigana" 			=> "グエン　ゴック　ナム",
+            "role" 				=> "Developer",
+            "nationality" 		=> "Vietnamese",
+            "living" 			=> "Japan, Tokyo",
+            "languages" 		=> [
+                {"language" 	=> "Vietnamese"		, "level" 	=> "Native"},
+                {"language" 	=> "English"		, "level" 	=> "Intermediate"},
+                {"language" 	=> "Japanese"		, "level" 	=> "Around N3 and N2"}
+            ],
+            "donate_url" 		=> "https://www.paypal.me/rakujin",
+		}
+		return $author;
+	}
+
 }
