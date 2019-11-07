@@ -155,19 +155,20 @@ class JapanNengo
 
 	public function author()
 	{
-		$author = {
-			"name" 				=> "Nguyen Ngoc Nam",
-			"furigana" 			=> "グエン　ゴック　ナム",
-            "role" 				=> "Developer",
-            "nationality" 		=> "Vietnamese",
-            "living" 			=> "Japan, Tokyo",
-            "languages" 		=> [
-                {"language" 	=> "Vietnamese"		, "level" 	=> "Native"},
-                {"language" 	=> "English"		, "level" 	=> "Intermediate"},
-                {"language" 	=> "Japanese"		, "level" 	=> "Around N3 and N2"}
-            ],
-            "donate_url" 		=> "https://www.paypal.me/rakujin",
-		}
+		$author = new stdClass();
+		$author
+		$author->name 				= "Nguyen Ngoc Nam";
+		$author->furigana 			= "グエン　ゴック　ナム";
+		$author->role 				= "Developer";
+		$author->nationality 		= "Vietnamese";
+		$author->living 			= "Japan, Tokyo";
+		$author->languages 			= [
+			["language" 	=> "Vietnamese"		, "level" 	=> "Native"],
+			["language" 	=> "English"		, "level" 	=> "Intermediate"],
+			["language" 	=> "Japanese"		, "level" 	=> "Around N3 and N2"],
+		];
+		$author->donate_url 		= "https://www.paypal.me/rakujin";
+
 		return $author;
 	}
 
