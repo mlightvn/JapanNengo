@@ -21,32 +21,32 @@ use NamTenTen\JapanNengo;
 
 $nengo = new JapanNengo();
 
-$date = 19890102;
-$nengo_date = $nengo->toNengoDate($date); // integer
+$date = 19890102; // integer: YYYYMMDD
+$nengo_date = $nengo->toNengoDate($date);
 echo $date . " ⇒ " . $nengo_date . "\n";
 
-$date = "20190430";
-$nengo_year = $nengo->toNengoYear($date); // string
-$nengo_date = $nengo->toNengoDate($date); // integer
+$date = "20190430"; // string: YYYYMMDD
+$nengo_year = $nengo->toNengoYear($date);
+$nengo_date = $nengo->toNengoDate($date);
 echo $date . " ⇒ " . $nengo_year . "\n";
 echo $date . " ⇒ " . $nengo_date . "\n";
 
 $date = "20190501";
-$nengo_year = $nengo->toNengoYear($date); // string
-$nengo_date = $nengo->toNengoDate($date); // integer
+$nengo_year = $nengo->toNengoYear($date);
+$nengo_date = $nengo->toNengoDate($date);
 echo $date . " ⇒ " . $nengo_year . "\n";
 echo $date . " ⇒ " . $nengo_date . "\n";
 
 $date = "20191107";
 $nengo_array = $nengo->toNengoArray($date);
-$nengo_date = $nengo->toNengoDate($date); // integer
+$nengo_date = $nengo->toNengoDate($date);
 echo $date . " ⇒ " . $nengo_date . "\n";
 var_dump($nengo_array);
 echo "\n";
 
 $date = 20201231;
 $nengo_array = $nengo->toNengoArray($date);
-$nengo_date = $nengo->toNengoDate($date); // integer
+$nengo_date = $nengo->toNengoDate($date);
 echo $date . " ⇒ " . $nengo_date . "\n";
 var_dump($nengo_array);
 echo "\n";
