@@ -50,4 +50,7 @@ $nengo_date = $nengo->toNengoDate($date); // integer
 echo $date . " ⇒ " . $nengo_date . "\n";
 var_dump($nengo_array);
 echo "\n";
+
+$donate_url = $nengo->donateUrl();
+echo "Donate Url: " . $donate_url . "\n";
 ```

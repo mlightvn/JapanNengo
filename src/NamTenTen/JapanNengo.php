@@ -156,7 +156,7 @@ class JapanNengo
 	public function author()
 	{
 		$author = new stdClass();
-		$author
+
 		$author->name 				= "Nguyen Ngoc Nam";
 		$author->furigana 			= "グエン　ゴック　ナム";
 		$author->role 				= "Developer";
