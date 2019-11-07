@@ -1,6 +1,8 @@
-# JapanNengo
+# JapanNengo / 年号
 Convert Western Calendar to Japan Calendar.
+
 E.g:
+
 - 1989/01/02 ⇒ 昭和64年01月02日
 - 2019/04/30 ⇒ 平成31年04月30日
 - 2019/05/01 ⇒ 令和1年05月01日
