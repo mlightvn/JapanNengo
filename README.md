@@ -8,7 +8,7 @@ E.g:
 # Installation
 ## Composer
 ```
-composer require namtenten/japan-nengo
+composer require namtenten/japan-nengo:dev-master
 ```
 
 # Usage
