@@ -1,0 +1,14 @@
+{
+    "name": "namtenten/japan-nengo",
+    "description": "日本の年号",
+    "type": "composer-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "グエン ナム",
+            "email": "thietlalung@yahoo.com.vn"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
