@@ -1,6 +1,7 @@
 {
     "name": "namtenten/japan-nengo",
     "description": "日本の年号",
+    "type": "composer-plugin",
     "license": "MIT",
     "authors": [
         {
