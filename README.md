@@ -1,5 +1,6 @@
 # JapanNengo / 年号
-Convert Western Calendar to Japan Calendar.
+- [x] Convert Western Calendar to Japan Calendar.　西暦を和暦に変換
+- [ ] Convert Japan Calendar to Western Calendar.　和暦を西暦に変換
 
 E.g:
 
