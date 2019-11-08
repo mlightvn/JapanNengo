@@ -23,6 +23,26 @@ composer require namtenten/japan-nengo
 ```
 
 # Usage
+## Functions
+### Convert Western Calendar to Japan Calendar.　西暦を和暦に変換
+
+|Function name|Description|
+----|----
+|`toNengoArray`|return an array stores all information: year, month, day, nengo, start date of a nengo, end date of a nengo, etc.|
+|`toNengoYear`|return a string stores only nengo year (和暦の年) of input （西暦）|
+|`toNengoDate`|return a string stores full nengo date of input date|
+
+### Convert Japan Calendar to Western Calendar.　和暦を西暦に変換
+
+|Function name|Description|
+----|----
+|`toDateArray`|return an array stores all information: year, month, day, nengo, start date of a nengo, end date of a nengo, etc.|
+|`toYear`|return a string stores only year (西暦) of input （和暦）|
+|`toDate`|return a string stores full date of input date （和暦）|
+
+
+
+## Example:
 Test file:
 ```
 # ./test/index.php
