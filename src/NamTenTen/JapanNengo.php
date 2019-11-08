@@ -94,6 +94,9 @@ class JapanNengo
 
 	public function toNengoYear($western_date = 20191107)
 	{
+		if(is_string($western_date)){
+			$western_date = str_replace(["/", "-"], "", $western_date);
+		}
 		$prev_era_year = reset($this->nengo_years);
 		foreach ($this->nengo_years as $key => $era_year) {
 			if($era_year['start_date'] <= $western_date){
@@ -113,6 +116,9 @@ class JapanNengo
 
 	public function toNengoDate($western_date = 20191107)
 	{
+		if(is_string($western_date)){
+			$western_date = str_replace(["/", "-"], "", $western_date);
+		}
 		$date_arr = $this->toNengoArray($western_date);
 		$nengo_year = $date_arr['custom']['year'];
 		$date_str = $date_arr["nengo"] . ($nengo_year == 1 ? "元" : $nengo_year) . "年" . $date_arr['custom']['month'] . "月" . $date_arr['custom']['day'] . "日";
@@ -122,6 +128,9 @@ class JapanNengo
 
 	public function toNengoArray($western_date = 20191107)
 	{
+		if(is_string($western_date)){
+			$western_date = str_replace(["/", "-"], "", $western_date);
+		}
 		$prev_era_year = reset($this->nengo_years);
 		foreach ($this->nengo_years as $key => $era_year) {
 			if($era_year['start_date'] <= $western_date){
@@ -146,6 +155,54 @@ class JapanNengo
 		$era['custom']['day'] 		= $western_day;
 
 		return $era;
+	}
+
+	public function toDateArray($wareki_date = "令和元年11月07日")
+	{
+		$wareki_date 		= str_replace("元", "1", $wareki_date); 			// 令和1年11月07日
+		$wareki_date 		= str_replace("月", "/", $wareki_date); 			// 令和1年11/07日
+		$wareki_date 		= str_replace("日", "", $wareki_date); 			// 令和1年11/07
+		$wareki_date_arr 	= explode("年", $wareki_date); 					// ["令和1", "11/07"]
+		$wareki_year 		= reset($wareki_date_arr); 						// 令和1
+		$month_day 			= end($wareki_date_arr); 						// 11/07
+		$month_day_arr 		= explode("/", $month_day); 					// [11,07]
+		$month 				= reset($month_day_arr); 						// 11
+		$day 				= end($month_day_arr); 							// 07
+
+		$date = null;
+
+		preg_match("/(.+?)(\d+?)/", $wareki_year, $nengo_arr); 		// ["令和1", "令和", 1]
+		if(count($nengo_arr) > 2){
+			$nengo_arr['nengo'] = $nengo_arr[1]; 					// 令和
+			$nengo_arr['nengo_number'] = $nengo_arr[2]; 			// 1
+
+			foreach ($this->nengo_years as $key => $wareki) {
+				if($wareki['nengo'] === $nengo_arr['nengo']){
+					$nengo_arr["nengo_info"] 			= $wareki;
+					$year 								= $wareki["start"]["year"] + $nengo_arr['nengo_number'] - 1; 		// 2019 + 1 - 1 = 2019
+					$nengo_arr["date"]["year"] 			= $year; 							// 2019
+					$nengo_arr["date"]["month_day"] 	= $month_day; 						// 11/07
+					$nengo_arr["date"]["month"] 		= $month; 							// 11
+					$nengo_arr["date"]["day"] 			= $day; 							// 07
+					$date 								= $year . "/" . $month_day; 		// 2019/11/07
+					$nengo_arr["date"]["date"] 			= $date;
+					break;
+				}
+			}
+		}
+
+		return $nengo_arr;
+	}
+
+	/**
+	 * [toDate description]
+	 * @param  string $nengo_date, 和暦 format. E.g: 令和元年11月07日
+	 * @return [string]          , date string by YYYY/MM/DD format
+	 */
+	public function toDate($wareki_date = "令和元年11月07日")
+	{
+		$nengo_arr = $this->toDateArray($wareki_date);
+		return ($nengo_arr["date"]["date"] ?? null);
 	}
 
 	public function donateUrl()
