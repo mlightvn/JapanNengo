@@ -151,8 +151,8 @@ class JapanNengo
 		$era['custom']['western_year'] 		= $western_year;
 
 		$era['custom']['year'] 		= $era_year;
-		$era['custom']['month'] 	= $western_month;
-		$era['custom']['day'] 		= $western_day;
+		$era['custom']['month'] 	= str_pad($western_month, 2, "0", STR_PAD_LEFT);
+		$era['custom']['day'] 		= str_pad($western_day, 2, "0", STR_PAD_LEFT);
 
 		return $era;
 	}
@@ -171,7 +171,7 @@ class JapanNengo
 
 		$date = null;
 
-		preg_match("/(.+?)(\d+?)/", $wareki_year, $nengo_arr); 		// ["令和1", "令和", 1]
+		preg_match("/(.+?)(\d+)/", $wareki_year, $nengo_arr); 		// ["令和1", "令和", 1]
 		if(count($nengo_arr) > 2){
 			$nengo_arr['nengo'] = $nengo_arr[1]; 					// 令和
 			$nengo_arr['nengo_number'] = $nengo_arr[2]; 			// 1
