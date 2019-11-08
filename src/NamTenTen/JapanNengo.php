@@ -205,6 +205,12 @@ class JapanNengo
 		return ($nengo_arr["date"]["date"] ?? null);
 	}
 
+	public function toYear($wareki_date = "令和元年11月07日")
+	{
+		$nengo_arr = $this->toDateArray($wareki_date);
+		return ($nengo_arr["date"]["year"] ?? null);
+	}
+
 	public function donateUrl()
 	{
 		return "https://www.paypal.me/rakujin";

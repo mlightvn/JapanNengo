@@ -75,9 +75,19 @@ $seireki = $nengo->toDate($wareki);
 echo "{$wareki} ⇒ {$seireki}\n";
 echo "\n";
 
+$seireki = $nengo->toYear($wareki);
+echo "{$wareki} ⇒ {$seireki}\n";
+
 $wareki = "令和2年11月07日";
 $seireki = $nengo->toDate($wareki);
 echo "{$wareki} ⇒ {$seireki}\n";
+echo "\n";
+
+$wareki = "令和2年11月07日";
+$seireki = $nengo->toDateArray($wareki);
+echo "{$wareki}\n";
+var_dump($seireki);
+echo "\n";
 echo "\n";
 
 // echo "==========================================\n";
