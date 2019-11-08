@@ -30,6 +30,10 @@ use NamTenTen\JapanNengo;
 
 $nengo = new JapanNengo();
 
+echo "==========================================\n";
+echo "西暦を和暦に変換\n";
+echo "==========================================\n";
+
 $date = 19890102; // integer: YYYYMMDD
 $nengo_date = $nengo->toNengoDate($date);
 echo $date . " ⇒ " . $nengo_date . "\n";
@@ -59,6 +63,19 @@ $nengo_date = $nengo->toNengoDate($date);
 echo $date . " ⇒ " . $nengo_date . "\n";
 var_dump($nengo_array);
 echo "\n";
+
+echo "==========================================\n";
+echo "和暦を西暦に変換\n";
+echo "==========================================\n";
+
+$wareki = "令和元年11月07日";
+$seireki = $nengo->toDate($wareki);
+echo "{$wareki} ⇒ {$seireki}\n";
+echo "\n";
+
+echo "==========================================\n";
+echo "作者情報\n";
+echo "==========================================\n";
 
 $donate_url = $nengo->donateUrl();
 echo "Donate Url: " . $donate_url . "\n\n";
