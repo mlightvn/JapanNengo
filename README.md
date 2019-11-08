@@ -16,7 +16,7 @@ E.g: 和暦を西暦に変換
 
 # Installation
 ## Composer
-```
+```shell
 composer require namtenten/japan-nengo
 ```
 
