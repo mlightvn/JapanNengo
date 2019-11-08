@@ -1,12 +1,18 @@
 # JapanNengo / 年号
 - [x] Convert Western Calendar to Japan Calendar.　西暦を和暦に変換
-- [ ] Convert Japan Calendar to Western Calendar.　和暦を西暦に変換
+- [x] Convert Japan Calendar to Western Calendar.　和暦を西暦に変換
 
-E.g:
+E.g: 西暦を和暦に変換
 
 - 1989/01/02 ⇒ 昭和64年01月02日
 - 2019/04/30 ⇒ 平成31年04月30日
 - 2019/05/01 ⇒ 令和1年05月01日
+
+E.g: 和暦を西暦に変換
+
+- 昭和64年01月02日 ⇒ 1989/01/02
+- 平成31年04月30日 ⇒ 2019/04/30
+- 令和1年05月01日 ⇒ 2019/05/01
 
 # Installation
 ## Composer
