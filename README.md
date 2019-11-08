@@ -36,6 +36,10 @@ use NamTenTen\JapanNengo;
 
 $nengo = new JapanNengo();
 
+echo "==========================================\n";
+echo "西暦を和暦に変換\n";
+echo "==========================================\n";
+
 $date = 19890102; // integer: YYYYMMDD
 $nengo_date = $nengo->toNengoDate($date);
 echo $date . " ⇒ " . $nengo_date . "\n";
